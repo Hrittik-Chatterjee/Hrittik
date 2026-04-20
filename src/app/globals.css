@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --win95-gray: #C0C0C0;
+  --win95-light-gray: #D4D0C8;
+  --win95-dark-gray: #808080;
+  --win95-darkest-gray: #404040;
+  --win95-white: #FFFFFF;
+  --win95-black: #000000;
+  --win95-teal: #008080;
+  --win95-navy: #000080;
+
+  --background: #008080;
+  --surface: #C0C0C0;
+  --surface-hover: #D4D0C8;
+  --foreground: #000000;
+  --accent: #000080;
+  --accent-hover: #0000AA;
+  --muted: #444444;
+  --border: #808080;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-vt323);
+}
+
+body {
+  background: var(--win95-teal);
+  color: var(--win95-black);
+  font-family: 'VT323', var(--font-vt323), monospace;
+  font-size: 16px;
+}
+
+.win95-raised {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+}
+
+.win95-sunken {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+.win95-button {
+  background: #C0C0C0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+  min-width: 20px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 11px;
+  line-height: 1;
+  padding: 0 2px;
+  user-select: none;
+}
+
+.win95-button:active {
+  border-color: #808080 #FFFFFF #FFFFFF #808080;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #C0C0C0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF;
+}
