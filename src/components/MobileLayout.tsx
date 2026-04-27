@@ -154,6 +154,34 @@ export default function MobileLayout({ posts }: { posts: BlogPost[] }) {
               </span>
             </div>
           )}
+          {!activeFolder && (
+            <div
+              style={{
+                margin: "24px 24px 0",
+                padding: "16px",
+                background: "rgba(0, 0, 170, 0.4)",
+                border: "2px solid #FFFFFF",
+                borderRadius: "8px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                color: "#FFFFFF",
+                fontFamily: "'VT323', monospace",
+                textShadow: "1px 1px 0 #000",
+              }}
+            >
+              <div>
+                <div style={{ fontSize: "36px", lineHeight: "1" }}>{time}</div>
+                <div style={{ fontSize: "16px", color: "#C0C0C0" }}>
+                  {new Date().toLocaleDateString("en-US", { weekday: 'long', month: 'short', day: 'numeric' })}
+                </div>
+              </div>
+              <div style={{ textAlign: "right" }}>
+                <div style={{ fontSize: "32px", lineHeight: "1" }}>☀️</div>
+                <div style={{ fontSize: "18px" }}>72°F</div>
+              </div>
+            </div>
+          )}
           <div
             style={{
               flex: 1,
