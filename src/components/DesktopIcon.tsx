@@ -11,7 +11,7 @@ interface DesktopIconProps {
   onMove: (id: string, position: { x: number; y: number }) => void;
 }
 
-function IconSvg({ id }: { id: string }) {
+export function IconSvg({ id }: { id: string }) {
   if (id === "blog") return (
     <svg viewBox="0 0 32 32" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style={{ imageRendering: "pixelated" }}>
       <rect x="4" y="1" width="20" height="27" fill="white" stroke="black" strokeWidth="1" />
@@ -31,6 +31,16 @@ function IconSvg({ id }: { id: string }) {
       <rect x="4" y="19" width="24" height="2" fill="#CC9900" />
     </svg>
   );
+  if (id === "games") return (
+    <svg viewBox="0 0 32 32" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style={{ imageRendering: "pixelated" }}>
+      <rect x="2" y="11" width="28" height="17" fill="#33CC33" stroke="black" strokeWidth="1" />
+      <path d="M2 11 L2 13 L14 13 L16 11 Z" fill="#33CC33" stroke="black" strokeWidth="1" />
+      <rect x="8" y="15" width="4" height="4" fill="#006600" />
+      <rect x="12" y="19" width="4" height="4" fill="#006600" />
+      <rect x="4" y="19" width="4" height="4" fill="#006600" />
+      <rect x="22" y="17" width="4" height="4" fill="#CC0000" />
+    </svg>
+  );
   if (id === "about") return (
     <svg viewBox="0 0 32 32" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style={{ imageRendering: "pixelated" }}>
       <rect x="3" y="3" width="26" height="19" rx="1" fill="#C0C0C0" stroke="black" strokeWidth="1" />
@@ -40,6 +50,16 @@ function IconSvg({ id }: { id: string }) {
       <line x1="9" y1="14" x2="18" y2="14" stroke="#00AAFF" strokeWidth="1" />
       <rect x="13" y="22" width="6" height="4" fill="#C0C0C0" stroke="black" strokeWidth="1" />
       <rect x="9" y="26" width="14" height="2" fill="#C0C0C0" stroke="black" strokeWidth="1" />
+    </svg>
+  );
+  if (id === "about_mobile") return (
+    <svg viewBox="0 0 32 32" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style={{ imageRendering: "pixelated" }}>
+      <rect x="6" y="4" width="20" height="24" rx="2" fill="#FFFFFF" stroke="black" strokeWidth="1" />
+      <rect x="12" y="2" width="8" height="4" fill="#C0C0C0" stroke="black" strokeWidth="1" />
+      <circle cx="16" cy="12" r="4" fill="#0000AA" />
+      <path d="M10 20 Q16 14 22 20" fill="#0000AA" />
+      <rect x="10" y="22" width="12" height="2" fill="#808080" />
+      <rect x="10" y="25" width="8" height="2" fill="#808080" />
     </svg>
   );
   if (id === "contact") return (

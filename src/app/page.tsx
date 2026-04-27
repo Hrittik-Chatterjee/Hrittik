@@ -1,7 +1,7 @@
-import Desktop from "@/components/Desktop";
+import AppLayout from "@/components/AppLayout";
 import { getBlogPosts } from "@/lib/mdx";
 
 export default function Home() {
   const posts = getBlogPosts();
-  return <Desktop posts={posts} />;
+  return <AppLayout posts={posts} />;
 }
